@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:04:25 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/03 03:10:26 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:14:00 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	PhoneBook::displayOneContactInfo(int displayCount)
 			std::cout << CTL_D_ERROR_MSG << std::endl;
 			std::exit(EXIT_FAILURE);
 		}
-		if (num[1] == '\0' && num[0] - '0' < displayCount)
+		if (std::isdigit(num[0]) && num[0] - '0' < displayCount && num[1] == '\0')
 			break ;
 		std::cout << "Invalid input. Please enter a number from 0 to " << displayCount - 1 << ": ";
 	}

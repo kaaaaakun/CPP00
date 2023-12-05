@@ -6,7 +6,7 @@
 #    By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/07 16:08:51 by tokazaki          #+#    #+#              #
-#    Updated: 2023/12/03 14:15:32 by tokazaki         ###   ########.fr        #
+#    Updated: 2023/12/05 18:00:08 by tokazaki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ DEPENDS	= $(OBJS:.o=.d)
 
 # -- flags --
 CXX		= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 CXXFLAGS	+= -MMD -MP
 
 # -- command --
